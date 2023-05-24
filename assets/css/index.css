@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --reaction: 0, 100%, 67%;
+    --memory: 39, 100%, 56%;
+    --verbal: 166, 100%, 37%;
+    --visual: 234, 85%, 45%;
+    --gray: 224, 30%, 27%;
+}
+
+main {
+    background-color: hsl(221, 100%, 96%);
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    background-color: white;
+}
+
+@media screen and (min-width: 1000px) {
+    .container {
+        grid-template-columns: 1fr 50%;
+        width: 50%;
+        margin: 0 auto;
+        min-height: auto;
+        border-radius: 2rem;
+        box-shadow: 1rem 1rem 2rem  hsla(var(--gray), 0.1);
+    }
+}
+
+h1,h2,p,a {
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+
+.results {
+    text-align: center;
+    background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    padding: 1.4rem 3.5rem;
+    border-bottom-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+}
+
+@media screen and (min-width: 1000px) {
+    .results {
+        border-radius: 2rem;
+        padding: 1.4rem 4rem;
+    }
+}
+
+.results h2 {
+    color: hsl(0, 0%, 100%);
+    font-weight: 500;
+    margin-top: 1.6rem;
+    margin-bottom: 0.5rem;
+}
+
+.stats-text {
+    color: hsla(221, 100%, 96%, 0.8);
+    font-weight: 400;
+}
+
+@media screen and (min-width: 1000px) {
+    .stats-text {
+        font-size: 18px;
+        font-weight: 400;
+    }
+}
+
+.circle {
+    background: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+    border-radius: 100%;
+    margin: 1rem auto;
+    width: 9rem;
+    height: 9rem;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    color: hsla(241, 100%, 89%, 0.6);
+    font-size: 1rem;
+}
+
+@media screen and (min-width: 1000px) {
+    .circle {
+        width: 13em;
+        height: 13rem;
+        margin: 2rem auto;
+    }
+}
+
+.circle span {
+    font-size: 4rem;
+    font-weight: 800;
+    color: white;
+}
+
+h1 {
+    font-size: 1.15rem;
+    color: hsla(221, 100%, 96%, 0.8);
+    font-weight: 500;
+}
+
+@media screen and (min-width: 1000px) {
+    h1 {
+        font-size: 1.4rem;
+        margin-top: 1rem;
+    }
+}
+
+p {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.summary {
+    padding: 0 2rem;
+}
+
+.summary h2 {
+    font-size: 1.2rem;
+    margin: 1.5rem 0;
+    font-weight: 500;
+    color: hsl(var(--gray));
+}
+
+@media screen and (min-width: 1000px) {
+    .summary h2 {
+        margin: 2rem auto;
+        font-weight: 600;
+        font-size: 1.5rem;
+    }
+}
+
+.score-card div {
+    display: flex;
+}
+
+.score-card {
+    justify-content: space-between;
+    padding: 1.1rem;
+    border-radius: 0.8rem;
+    display: flex;
+}
+
+.score-card p {
+    margin-left: 0.6rem;
+    color: hsla(var(--gray), 0.5);
+}
+
+.score-card span {
+    color: hsl(var(--gray));
+}
+
+.score-card[data-score="reaction"] div p {
+    color: hsl(var(--reaction));
+}
+
+.score-card[data-score="reaction"] {
+    background-color: hsla(var(--reaction), 0.05);
+}
+
+.score-card[data-score="memory"] div p {
+    color: hsl(var(--memory));
+}
+
+.score-card[data-score="memory"] {
+    background-color: hsla(var(--memory), 0.05);
+}
+
+.score-card[data-score="verbal"] div p {
+    color: hsl(var(--verbal));
+}
+
+.score-card[data-score="verbal"] {
+    background-color: hsla(var(--verbal), 0.05);
+}
+
+.score-card[data-score="visual"] div p {
+    color: hsl(var(--visual));
+}
+
+.score-card[data-score="visual"] {
+    background-color: hsla(var(--visual), 0.05);
+}
+
+.score-grid {
+    display: grid;
+    grid-gap: 1rem;
+}
+
+button {
+    background-color: hsl(var(--gray));
+    border: none;
+    padding: 1rem;
+    border-radius: 5rem;
+    font-family: 'Hanken Grotesk', sans-serif;
+    width: 100%;
+    margin-top: 1.5rem;
+    font-size: 18px;
+    color: white;
+}
+
+@media screen and (min-width: 1000px) {
+    button {
+        margin-bottom: 3rem;
+        margin-top: 3rem;
+    }
+}
+
+button:hover {
+    background-color: hsla(var(--gray), 0.9);
+    cursor: pointer;
+}
+
+button:active {
+    background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+}
